@@ -31,5 +31,9 @@ public class HomeScreen extends Screen
             screen = new Instructions();
         Greenfoot.setWorld(screen);
     }
+        if(Greenfoot.isKeyDown("s")){
+            screen = new ChooseNameScreen();
+            Greenfoot.setWorld(screen);
+        }
 }
 }

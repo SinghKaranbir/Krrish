@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri Nov 27 23:02:01 PST 2015
+#Fri Nov 27 23:35:12 PST 2015
 readme.name=@README
 class.HomeScreen.image=cartoon-building-006.jpg
 target2.name=Instructions
@@ -13,7 +13,9 @@ target3.type=ClassTarget
 target2.y=70
 package.numTargets=3
 target2.x=70
+class.ModeAndNameScreen.superclass=Screen
 target1.height=50
+class.StringInputBox.superclass=greenfoot.Actor
 target1.y=10
 target2.height=50
 target1.x=70
