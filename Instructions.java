@@ -29,8 +29,7 @@ public class Instructions extends Screen
     
     public void act(){
         if(Greenfoot.isKeyDown("b")){
-            Screen screen = new HomeScreen();
-            Greenfoot.setWorld(screen);
+            setScreen(new HomeScreen());
         }
     }
 }

@@ -25,15 +25,11 @@ public class HomeScreen extends Screen
     }
     
     public void act(){
-        Screen screen;
-        
         if(Greenfoot.isKeyDown("i")){
-            screen = new Instructions();
-        Greenfoot.setWorld(screen);
-    }
-        if(Greenfoot.isKeyDown("s")){
-            screen = new ChooseNameScreen();
-            Greenfoot.setWorld(screen);
+            setScreen(new Instructions());
         }
-}
+        if(Greenfoot.isKeyDown("s")){
+            setScreen(new ChooseNameScreen());
+        }
+    }
 }

@@ -28,12 +28,28 @@ public class ChooseNameScreen extends Screen
     }
     
     public void act(){
-       if(Greenfoot.isKeyDown("a")) userName = "Jagmohan Singh";
-       if(Greenfoot.isKeyDown("b")) userName = "Jasdeep Singh";
-       if(Greenfoot.isKeyDown("c")) userName = "Karanbir Singh";
-       if(Greenfoot.isKeyDown("d")) userName = "Nitesh Wadwa"; 
-       if(Greenfoot.isKeyDown("e")) userName = "Sumit Rana";
-        if(Greenfoot.isKeyDown("x")) Greenfoot.setWorld(new HomeScreen());
+        
+       if(Greenfoot.isKeyDown("a")) {
+           userName = "Jagmohan Singh";
+           setScreen(new ModesScreen());
+           }
+       if(Greenfoot.isKeyDown("b")) {
+           userName = "Jasdeep Singh";
+           setScreen(new ModesScreen());
+         }
+       if(Greenfoot.isKeyDown("c")) {
+           userName = "Karanbir Singh";
+           setScreen(new ModesScreen());
+          }
+       if(Greenfoot.isKeyDown("d")) {
+           userName = "Nitesh Wadwa";
+           setScreen(new ModesScreen());
+        }
+       if(Greenfoot.isKeyDown("e")){
+           userName = "Sumit Rana";
+           setScreen(new ModesScreen());
+        }
+       if(Greenfoot.isKeyDown("x")) setScreen(new HomeScreen());
            
        
        

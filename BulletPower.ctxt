@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=BulletPower
+comment0.text=\n\ Write\ a\ description\ of\ class\ BulletPower\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=BulletPower()
+comment2.params=speed\ rotation
+comment2.target=BulletPower(Vector,\ int)
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ The\ bullet\ will\ damage\ asteroids\ if\ it\ hits\ them.\n
+comment4.params=
+comment4.target=void\ checkAsteroidHit()
+comment4.text=\n\ Check\ whether\ we\ have\ hit\ an\ asteroid.\n
+numComments=5

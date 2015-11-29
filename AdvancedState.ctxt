@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=AdvancedState
+comment1.params=rocket
+comment1.target=AdvancedState(Rocket)
+comment2.params=
+comment2.target=void\ ignite()
+comment3.params=
+comment3.target=void\ startProtonWave()
+numComments=4

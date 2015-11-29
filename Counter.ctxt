@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Counter
+comment1.params=prefix\ playMode
+comment1.target=Counter(java.lang.String,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=strategy
+comment3.target=void\ setStrategy(IRecordStrategy)
+comment4.params=score
+comment4.target=void\ add(int)
+comment5.params=
+comment5.target=int\ getValue()
+comment6.params=
+comment6.target=void\ updateImage()
+comment7.params=newValue
+comment7.target=void\ setValue(int)
+numComments=8

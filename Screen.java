@@ -18,4 +18,7 @@ public abstract class Screen extends World
         // Create a new world with 800x641 cells with a cell size of 1x1 pixels.
         super(800, 641, 1); 
     }
+    protected void setScreen(Screen screen){
+        Greenfoot.setWorld(screen);
+    }
 }
