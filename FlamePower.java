@@ -1,18 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BulletPower here.
+ * Write a description of class FlamePower here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BulletPower extends Power
+public class FlamePower extends Power
 {
     /** The damage this bullet will deal */
-    private static final int damage = 16;
+    private static final int damage = 30;
 
     /** A bullet looses one life each act, and will disappear when life = 0 */
-    private int life = 50;
+    private int life = 70;
     
     public static int xPos;
     public static int yPos;
@@ -20,9 +20,8 @@ public class BulletPower extends Power
 
     private GreenfootSound shoot = new GreenfootSound("EnergyGun.wav");
 
-  
-    public BulletPower(Vector speed, int rotation)
-    {
+      public FlamePower(Vector speed, int rotation)
+      {
         super(speed,rotation);
         addForce(new Vector(rotation, 15));
         //shoot.setVolume(90);
@@ -61,5 +60,5 @@ public class BulletPower extends Power
             getWorld().removeObject(this);
             asteroid.hit(damage);
         }
-    }
+    } 
 }

@@ -21,7 +21,6 @@ public class Rocket extends SmoothMover {
 
     public static boolean PIndicatorAdded;
     public static boolean bWeaponActivated;
-    
     // Posesses all states
     IRocketState normalState;
     IRocketState advancedState;
@@ -180,25 +179,50 @@ public class Rocket extends SmoothMover {
     }
     
     public void fire() {
-        if (reloadDelayCount >= gunReloadTime) {           
-            double bulletPos[][] = {{20, 5}, {20, -5}};
-            for (double[] pos: bulletPos) {
-
-                double x = pos[0];
-                double y = pos[1];
-
-                double dir = calculateDirection(x, y);
-                double dist = calculateMagnitude(x, y);
-
-                dir += getRotation();
-
-                double worldX = getX() + calculateX(dir, dist);
-                double worldY = getY() + calculateY(dir, dist);
-
-                Bullet bullet = new Bullet (getMovement().copy(), getRotation());
-                getWorld().addObject(bullet, (int) worldX, (int) worldY);
-                bullet.move();
-                reloadDelayCount = 0;
+        Power power;
+        if(GameScreen.level >= 3) {
+            if (reloadDelayCount >= gunReloadTime) {           
+                double bulletPos[][] = {{20, 5}, {20, -5}};
+                for (double[] pos: bulletPos) {
+    
+                    double x = pos[0];
+                    double y = pos[1];
+    
+                    double dir = calculateDirection(x, y);
+                    double dist = calculateMagnitude(x, y);
+    
+                    dir += getRotation();
+    
+                    double worldX = getX() + calculateX(dir, dist);
+                    double worldY = getY() + calculateY(dir, dist);
+    
+                    power = new FlamePower (getMovement().copy(), getRotation());
+                    getWorld().addObject(power, (int) worldX, (int) worldY);
+                    power.move();
+                    reloadDelayCount = 0;
+                }
+            }
+        }else{
+            if (reloadDelayCount >= gunReloadTime) {           
+                double bulletPos[][] = {{20, 5}, {20, -5}};
+                for (double[] pos: bulletPos) {
+    
+                    double x = pos[0];
+                    double y = pos[1];
+    
+                    double dir = calculateDirection(x, y);
+                    double dist = calculateMagnitude(x, y);
+    
+                    dir += getRotation();
+    
+                    double worldX = getX() + calculateX(dir, dist);
+                    double worldY = getY() + calculateY(dir, dist);
+    
+                    power = new BulletPower (getMovement().copy(), getRotation());
+                    getWorld().addObject(power, (int) worldX, (int) worldY);
+                    power.move();
+                    reloadDelayCount = 0;
+                }
             }
         }
     }
